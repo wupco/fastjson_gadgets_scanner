@@ -1,7 +1,7 @@
 ## Usage 
 
 1. `pip install javalang`
-2. move `.jar` files to `.m2`
+2. move `.jar` files to `m2`
 3. `python decomplie_jar.py`
 4. `python scanner.py`
 5. check results in `result.txt`
