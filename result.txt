@@ -1,0 +1,1 @@
+/Users/wupco/Desktop/ctf/fastjson_gadgets_scanner/source/jetty-naming-6.1.26/org/mortbay/naming/NamingContext.java lookup

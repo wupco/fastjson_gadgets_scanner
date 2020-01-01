@@ -11,7 +11,7 @@ from lib import *
 
 #
 if __name__ == '__main__':
-    source_dir = "/Users/xxxxxxx/source/"
+    source_dir = "./source/"
     file_list = os.listdir(source_dir)
     num = 1
     for _file in file_list:

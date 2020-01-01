@@ -144,16 +144,18 @@ def decomplier(file):
     :param file:
     :return:
     """
-    cmd = "java -jar ~/tools/FernFlower.jar " + file + "  /Users/xxxxxxx/source/   > /dev/null 2>&1"
+    cmd = "java -jar ./fernflower/FernFlower.jar " + file + "  ./source/   > /dev/null 2>&1"
+    print cmd
     os.system(cmd)
 
     jar_file_name = file.split('/')[-1]
-    jar_file_path = "/Users/xxxxxxx/source/" + jar_file_name
+    jar_file_path = "./source/" + jar_file_name
 
     target_dir = jar_file_name.split('.')[:-1]
     source_dir = '.'.join(target_dir)
-    source_dir = '/Users/xxxxxxx/source/' + source_dir
+    source_dir = './source/' + source_dir
     unzip_cmd = "unzip " + jar_file_path + " -d " + source_dir + " > /dev/null 2>&1"
+    print unzip_cmd
     os.system(unzip_cmd)
     return source_dir
 
@@ -265,9 +267,11 @@ def scanner(filename):
     except:
         return False
     class_declaration_list = get_class_declaration(root_tree)
+    print 'start scan..'
     for class_declaration in class_declaration_list:
         for method_declare in class_declaration.methods:
             if ack(method_declare) is True:
                 string = "{file} {method}".format(file=filename, method=method_declare.name)
                 print string
                 write_file("./result.txt", string)
+    print 'henfan!'
