@@ -11,7 +11,7 @@ from lib import *
 
 
 if __name__ == '__main__':
-    m2_dir = "./.m2/"
+    m2_dir = "./m2/"
     jar_file_list = get_file_list(m2_dir)
     print jar_file_list
     #jar_file_list = clean(jar_file_list)
